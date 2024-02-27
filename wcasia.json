@@ -5,12 +5,29 @@
         "php": "8.0",
         "wp": "latest"
     },
+    "features": {
+        "networking": true
+    },
     "phpExtensionBundles": ["kitchen-sink"],
     "steps": [
         {
             "step": "login",
             "username": "admin",
             "password": "password"
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org/plugins",
+                "slug": "woocommerce"
+            }
+        },
+        {
+            "step": "installTheme",
+            "themeZipFile": {
+                "resource": "wordpress.org/themes",
+                "slug": "storefront"
+            }
         }
     ]
 }
